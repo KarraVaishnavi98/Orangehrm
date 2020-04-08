@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="49624" started-at="2020-04-07T15:21:01 PDT" finished-at="2020-04-07T15:21:50 PDT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="49624" started-at="2020-04-07T15:21:01 PDT" finished-at="2020-04-07T15:21:50 PDT">
+      <class name="testNG.PIMAddEmployee">
+        <test-method status="PASS" signature="newEmployee()[pri:0, instance:testNG.PIMAddEmployee@127bd23]" name="newEmployee" duration-ms="49506" started-at="2020-04-07T15:21:01 PDT" finished-at="2020-04-07T15:21:50 PDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newEmployee -->
+      </class> <!-- testNG.PIMAddEmployee -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
