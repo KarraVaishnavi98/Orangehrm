@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name=" Login Test Suite" verbose="2" >
+<test name="Invalid username">
+<parameter name="username" value="admin1"></parameter>
+<parameter name="password" value="admin123"></parameter>
+<classes>
+<class name="testng.Invalidusername"></class>
+</classes>
+</test>
+
+<test name="Invalid password">
+<parameter name="username" value="Admin"></parameter>
+<parameter name="password" value="admin12"></parameter>
+<classes>
+<class name="testng.Invalidpwd"></class>
+</classes>
+</test>
+
+<test name="Invalid password and username">
+<parameter name="username" value="admin1"></parameter>
+<parameter name="password" value="admin1234"></parameter>
+<classes>
+<class name="testng.BothInvalid"></class>
+</classes>
+</test>
+
+<test name="Valid username and password">
+<parameter name="username" value="Admin"></parameter>
+<parameter name="password" value="admin123"></parameter>
+<classes>
+<class name="testng.BothValid"></class>
+</classes>
+</test>
+</suite>
