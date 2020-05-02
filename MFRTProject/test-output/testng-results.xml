@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44685" started-at="2020-05-02T12:05:11 IST" finished-at="2020-05-02T12:05:55 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44685" started-at="2020-05-02T12:05:11 IST" finished-at="2020-05-02T12:05:55 IST">
+      <class name="testsuites.BeforeandAfterSuite">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:testsuites.BeforeandAfterSuite@56aac163]" name="launchBrowser" is-config="true" duration-ms="16417" started-at="2020-05-02T12:04:54 IST" finished-at="2020-05-02T12:05:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="loginClass()[pri:1, instance:testsuites.BeforeandAfterSuite@56aac163]" name="loginClass" duration-ms="16253" started-at="2020-05-02T12:05:11 IST" finished-at="2020-05-02T12:05:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginClass -->
+        <test-method status="PASS" signature="configureleave()[pri:2, instance:testsuites.BeforeandAfterSuite@56aac163]" name="configureleave" duration-ms="28096" started-at="2020-05-02T12:05:27 IST" finished-at="2020-05-02T12:05:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configureleave -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testsuites.BeforeandAfterSuite@56aac163]" name="closeBrowser" is-config="true" duration-ms="1125" started-at="2020-05-02T12:05:56 IST" finished-at="2020-05-02T12:05:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testsuites.BeforeandAfterSuite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
