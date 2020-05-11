@@ -29,8 +29,12 @@ public class AdminUser {
 	
 
 	public void adminUser(WebDriver driver) throws IOException, InterruptedException {
-	
-				
+		FileInputStream stream=new FileInputStream("configure.properties");
+	    Properties properties=new Properties();
+	    properties.load(stream);
+	    String Employeename=properties.getProperty("Employeename");
+	    String userID=properties.getProperty("UserId")	;	
+		String pword=properties.getProperty("password");	
 		 PageFactory.initElements(driver,AdminPageObject.class);
 		 	
 		 AdminPageObject.adminButton.click();	
@@ -39,8 +43,8 @@ public class AdminUser {
 		 AdminPageObject.Add.click();
 		 Select userRole=new Select(AdminPageObject.Userrole);
 		 userRole.selectByValue("2");
-		 AdminPageObject.Employeename.sendKeys("Steven Edwards");
-		 AdminPageObject.Username.sendKeys("ander98son");
+		 AdminPageObject.Employeename.sendKeys(Employeename);
+		 AdminPageObject.Username.sendKeys(userID);
 		 Select status=new Select(AdminPageObject.Status);
 		 status.selectByValue("1");
 		 AdminPageObject.Password.sendKeys("Vaishuchomi@123");

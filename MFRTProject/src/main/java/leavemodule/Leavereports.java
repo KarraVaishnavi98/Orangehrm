@@ -8,25 +8,22 @@ import pageobjectmodel.LeaveReportsObj;
 
 public class Leavereports {
 
-	public void leaveRep(WebDriver driver) throws InterruptedException {
+	public void leaveRep(WebDriver driver) {
 		
-			// TODO Auto-generated method stub
-			  PageFactory.initElements(driver,LeaveReportsObj.class);
+			
+	       PageFactory.initElements(driver,LeaveReportsObj.class);
 			  	
-
 			  LeaveReportsObj.reports.click();
 			  LeaveReportsObj.viewleave.click();
 	    
-	    Select select2=new Select(LeaveReportsObj.generate);
-	    select2.selectByValue("1");
-	    LeaveReportsObj.typeofleave.click();
-	    Thread.sleep(2000);
-	    LeaveReportsObj.period.click();
-	    LeaveReportsObj.pastemp.click();
-	    LeaveReportsObj.view.click();
-	    Thread.sleep(2000);
-	    driver.quit();
-
+	          Select select2=new Select(LeaveReportsObj.generate);
+	          select2.selectByValue("1");
+	       
+	          LeaveReportsObj.typeofleave.click();
+	          LeaveReportsObj.period.click();
+	          LeaveReportsObj.pastemp.click();
+	          LeaveReportsObj.view.click();
+	 
 
 	}
 

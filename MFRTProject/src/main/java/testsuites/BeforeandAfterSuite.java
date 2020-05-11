@@ -37,14 +37,14 @@ public class BeforeandAfterSuite {
 @BeforeSuite
 	public void launchBrowser() throws AWTException, Throwable {
 
-     FileInputStream stream=new FileInputStream("property");
-     Properties properties=new Properties();
-     properties.load(stream);
-     
-     String driverLocation=properties.getProperty("DriverLocation");
-     String Link=properties.getProperty("Url");
+	FileInputStream stream=new FileInputStream("property");
+    Properties properties=new Properties();
+    properties.load(stream);
+    
+    String driverLocation=properties.getProperty("DriverLocation");
+    String Link=properties.getProperty("Url");
 
-     System.setProperty("webdriver.chrome.driver",driverLocation);
+    System.setProperty("webdriver.chrome.driver",driverLocation);
 
 	  driver=new ChromeDriver();
 	  driver.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS);

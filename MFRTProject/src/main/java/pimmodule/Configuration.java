@@ -18,7 +18,7 @@ import pageobjectmodel.PIMConfig;
 
 public class Configuration {
 @Test
-	public  void configMod(WebDriver driver) throws InterruptedException, AWTException {
+	public void configMod(WebDriver driver) throws InterruptedException, AWTException {
 		
 PageFactory.initElements(driver,PIMConfig.class);
 	

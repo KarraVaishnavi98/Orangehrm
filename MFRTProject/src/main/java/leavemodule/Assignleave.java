@@ -1,5 +1,10 @@
 package leavemodule;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -9,14 +14,28 @@ import pageobjectmodel.AssignLeaveObj;
 
 public class Assignleave {
 
-	public void assLeave(WebDriver driver) throws Throwable {
+	public void assLeave(WebDriver driver) {
+		FileInputStream stream = null;
+		try {
+			stream = new FileInputStream("configure.properties");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		Properties properties=new Properties();
+		try {
+			properties.load(stream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		String empname=properties.getProperty("EmployeeName");
 	
-PageFactory.initElements(driver, AssignLeaveObj.class);
+      PageFactory.initElements(driver, AssignLeaveObj.class);
 		        
-AssignLeaveObj.leavebutton.click();
-AssignLeaveObj.assignleave.click();
-AssignLeaveObj.empname.sendKeys("Linda Anderson"+Keys.ENTER);
-		        Thread.sleep(2000);
+                AssignLeaveObj.leavebutton.click();
+                AssignLeaveObj.assignleave.click();
+                AssignLeaveObj.empname.sendKeys(empname+Keys.ENTER);
+		
 		        
 		        Select select=new Select(AssignLeaveObj.leavetype);
 		        select.selectByValue("3");
@@ -39,11 +58,6 @@ AssignLeaveObj.empname.sendKeys("Linda Anderson"+Keys.ENTER);
 		        AssignLeaveObj.assignbutton.click();
 		        AssignLeaveObj.clickok.click();
 		        
-
-
-
-
-
 
 	}
 

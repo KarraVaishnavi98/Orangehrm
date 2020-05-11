@@ -3,11 +3,24 @@
 <suite guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [Orangehrm]">
   <test thread-count="5" verbose="2" name="Test MFRTproject(failed)">
     <classes>
-      <class name="testsuites.Loginlogo">
+      <class name="testsuites.BeforeandAfterSuite">
         <methods>
-          <include name="login"/>
+          <include name="assignLeave"/>
+          <include name="leavelist"/>
+          <include name="pimConfigure"/>
+          <include name="pimreports"/>
+          <include name="leaveentitle"/>
+          <include name="adminjob"/>
+          <include name="employeeList"/>
+          <include name="leaveconfigure"/>
+          <include name="recruitvacancy"/>
+          <include name="leavereports"/>
+          <include name="performancekpi"/>
+          <include name="trackers"/>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- testsuites.Loginlogo -->
+      </class> <!-- testsuites.BeforeandAfterSuite -->
     </classes>
   </test> <!-- Test MFRTproject(failed) -->
 </suite> <!-- Failed suite [Orangehrm] -->
